@@ -44,4 +44,4 @@ six
 tzdata
 urllib3
 watchdog
-websocketsa
+websockets
