@@ -1,5 +1,7 @@
+
 from pydantic import BaseModel, Field
 from typing import Dict
+
 
 class PredictionResponse(BaseModel):
     predicted_category: str = Field(
@@ -10,9 +12,9 @@ class PredictionResponse(BaseModel):
 
     confidence: float = Field(
         ...,
-        ge=0,
-        le=1,
-        description="Confidence score for the predicted class",
+        ge=0.0,
+        le=1.0,
+        description="Model's confidence score (range: 0 to 1)",
         examples=[0.8432]
     )
 
